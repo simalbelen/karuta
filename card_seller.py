@@ -39,7 +39,8 @@ def card_seller():
 
         print_progress(key+1, len(CARDS))
         
-        sleep(cooldowns[key])
+        if ((key + 1) != len(CARDS)):
+            sleep(cooldowns[key])
 
 if __name__ == '__main__':
     card_seller()
